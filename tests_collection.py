@@ -4,8 +4,8 @@ from project_testcase import ProjectTestCase
 class TestsCollectionOne(ProjectTestCase):
 
     def ordered_tests_runner(self):
-        self.test_example_first()
-        self.test_example_second()
+        self.test_common_part_first()
+        self.test_common_part_second()
         self.test_assert_that_A_eq_B()
         self.test_open_tested_url()
 
@@ -33,10 +33,10 @@ class TestsCollectionOne(ProjectTestCase):
 class TestsCollectionTwo(ProjectTestCase):
 
     def ordered_tests_runner(self):
-        self.test_example_first()
-        self.test_example_second()
+        self.test_common_part_first()
+        self.test_common_part_second()
         self.test_assert_that_Z_eq_Y()
-        self.test_open_tested_url()
+        self.test_open_tested_url2()
 
     def test_assert_that_Z_eq_Y(self):
 
@@ -47,7 +47,7 @@ class TestsCollectionTwo(ProjectTestCase):
         def it_should_be_A_eq_B(ctx):
             self.assertEqual(ctx.z, ctx.y)
 
-    def test_open_tested_url(self):
+    def test_open_tested_url2(self):
 
         def given_tested_url(ctx):
             self.driver["url"] = "http://yahoojeu.com"
@@ -63,10 +63,10 @@ class TestsCollectionTwo(ProjectTestCase):
 class TestsCollectionThree(ProjectTestCase):
 
     def ordered_tests_runner(self):
-        self.test_example_first()
-        self.test_example_second()
+        self.test_common_part_first()
+        self.test_common_part_second()
         self.test_assert_that_H_not_eq_T()
-        self.test_open_tested_url()
+        self.test_open_tested_url3()
 
     def test_assert_that_H_not_eq_T(self):
 
@@ -77,7 +77,7 @@ class TestsCollectionThree(ProjectTestCase):
         def it_should_be_H_not_eq_T(ctx):
             self.assertNotEqual(ctx.h, ctx.t)
 
-    def test_open_tested_url(self):
+    def test_open_tested_url3(self):
 
         def given_tested_url(ctx):
             self.driver["url"] = "http://mail-mail.com"

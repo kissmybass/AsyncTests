@@ -11,7 +11,8 @@ class ProjectTestCase(SeleniumTestCase):
     def ordered_tests_runner(self):
         pass
 
-    def test_example_first(self, ctx):
+
+    def test_common_part_first(self):
 
         def given_test_url(ctx):
             ctx.url = URL
@@ -22,7 +23,8 @@ class ProjectTestCase(SeleniumTestCase):
         def it_should_be_stored_in_dict(ctx):
             assert URL in self.driver["url"]
 
-    def test_example_second(self, ctx):
+
+    def test_common_part_second(self):
 
         def given_correct_usermail_and_password(ctx):
             ctx.mail = "example@mail.com"
