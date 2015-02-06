@@ -1,4 +1,5 @@
 import unittest
+from teamcity.unittestpy import TeamcityTestRunner
 from async_testsuite import AsyncTestSuite
 from tests_collection import TestsCollectionOne, TestsCollectionTwo, TestsCollectionThree
 
@@ -12,6 +13,6 @@ def test_suite():
     return suite
 
 if __name__ == '__main__':
-    unittest.TextTestRunner(verbosity=1, ).run(test_suite())
-
+    # unittest.TextTestRunner(verbosity=1, ).run(test_suite())
+    TeamcityTestRunner().run(test_suite())
 
