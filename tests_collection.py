@@ -1,3 +1,4 @@
+import time
 from project_testcase import ProjectTestCase
 
 
@@ -24,6 +25,7 @@ class TestsCollectionOne(ProjectTestCase):
             ctx.url = self.driver["url"]
 
         def when_open_test_url(ctx):
+            time.sleep(2)
             print ctx.url
 
         def it_should_be_open_tested_page(ctx):
@@ -54,6 +56,7 @@ class TestsCollectionTwo(ProjectTestCase):
             ctx.url = self.driver["url"]
 
         def when_open_test_url(ctx):
+            time.sleep(1)
             print ctx.url
 
         def it_should_be_open_tested_page(ctx):
@@ -84,6 +87,7 @@ class TestsCollectionThree(ProjectTestCase):
             ctx.url = self.driver["url"]
 
         def when_open_test_url(ctx):
+            time.sleep(3)
             print ctx.url
 
         def it_should_be_open_tested_page(ctx):

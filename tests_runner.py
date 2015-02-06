@@ -1,4 +1,5 @@
 import unittest
+import sys
 from teamcity.unittestpy import TeamcityTestRunner
 from async_testsuite import AsyncTestSuite
 from tests_collection import TestsCollectionOne, TestsCollectionTwo, TestsCollectionThree
